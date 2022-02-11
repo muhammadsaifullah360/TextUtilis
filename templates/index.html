@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Utilis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Codey Strom</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Well Come To TextUtilis..</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container">
+  <form action='/analyze' method='get'>
+      <label for="exampleFormControlTextarea1" class="form-label"> Enter Your Text Here!</label>
+  <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+    <div style="margin-top: 10px">
+        <div class="form-check form-switch">
+      <input   class="form-check-input" name="removepunc" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punctuation</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" name="capitalization" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">UPPERCASE</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" name="newlineremover" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">New Line Remover</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" name="spaceremover" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Extra Space Remover</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" name="counter" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Text Counter</label>
+    </div>
+    <button  type="submit" class="btn btn-dark mt-3">Analyze Text</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
